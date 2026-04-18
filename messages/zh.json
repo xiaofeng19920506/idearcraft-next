@@ -2,7 +2,12 @@
   "metadata": {
     "title": "IDearCraft",
     "titleTemplate": "%s · IDearCraft",
-    "description": "手作体验服务 Crafting Experience Services"
+    "description": "手作体验服务 Crafting Experience Services",
+    "cart": "购物车",
+    "checkout": "结账",
+    "about": "关于我们",
+    "diy": "DIY 灵感",
+    "comingSoon": "即将上线"
   },
   "nav": {
     "booking": "预约",
@@ -117,8 +122,9 @@
   "shop": {
     "eyebrow": "商店",
     "title": "商店",
-    "intro": "浏览 → 商品页 → 加入购物车。",
-    "back": "← 返回商店"
+    "intro": "浏览 → 商品页 → 加入购物车。演示商品；支付可换 Stripe / Square 等。",
+    "back": "← 返回商店",
+    "notFound": "商品未找到"
   },
   "product": {
     "addToCart": "加入购物车",

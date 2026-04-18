@@ -1,27 +1,32 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { products } from "@/lib/data";
 import { formatUsd } from "@/lib/format";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "商店",
-  description: "材料包、礼盒与工作室周边。",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function ShopPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "shop" });
+  return { title: t("title"), description: t("intro") };
+}
+
+export default async function ShopPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("shop");
+  const priceLocale = locale === "zh" ? "zh" : "en";
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <header className="max-w-2xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
-          Shop
+          {t("eyebrow")}
         </p>
-        <h1 className="mt-3 font-display text-4xl text-[color:var(--ink)]">Shop A Plushie 式商店动线</h1>
-        <p className="mt-4 text-[color:var(--muted)]">
-          对应原站{" "}
-          <code className="rounded bg-white/70 px-1.5 py-0.5 text-xs">/shop</code>
-          ：网格浏览 → 商品详情 → 购物车 → 结账。此处为演示商品与前端流程，支付可替换为 Stripe /
-          Square 等。
-        </p>
+        <h1 className="mt-3 font-display text-4xl text-[color:var(--ink)]">{t("title")}</h1>
+        <p className="mt-4 text-[color:var(--muted)]">{t("intro")}</p>
       </header>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -40,7 +45,7 @@ export default function ShopPage() {
                 {p.shortDescription}
               </p>
               <p className="mt-4 text-lg font-semibold text-[color:var(--accent-strong)]">
-                {formatUsd(p.priceUsd)}
+                {formatUsd(p.priceUsd, priceLocale)}
               </p>
             </div>
           </Link>

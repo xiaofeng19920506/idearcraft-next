@@ -2,7 +2,12 @@
   "metadata": {
     "title": "IDearCraft",
     "titleTemplate": "%s · IDearCraft",
-    "description": "Crafting Experience Services"
+    "description": "Crafting Experience Services",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "about": "About",
+    "diy": "DIY",
+    "comingSoon": "Coming soon"
   },
   "nav": {
     "booking": "Book",
@@ -117,8 +122,9 @@
   "shop": {
     "eyebrow": "Shop",
     "title": "Shop",
-    "intro": "Browse → product → add to cart.",
-    "back": "← Back to shop"
+    "intro": "Browse → product → add to cart. Demo products; swap in Stripe or Square for payments.",
+    "back": "← Back to shop",
+    "notFound": "Product not found"
   },
   "product": {
     "addToCart": "Add to cart",
