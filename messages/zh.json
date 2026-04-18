@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "IDearCraft",
+    "titleTemplate": "%s · IDearCraft",
+    "description": "手作体验服务 Crafting Experience Services"
+  },
+  "nav": {
+    "booking": "预约",
+    "shop": "商店",
+    "diy": "DIY",
+    "about": "关于",
+    "cart": "购物车",
+    "bookNow": "立即预约",
+    "menu": "菜单",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "close": "关闭",
+    "language": "语言",
+    "en": "English",
+    "zh": "中文"
+  },
+  "footer": {
+    "tagline": "手作体验工作室 · 课程、派对与材料商店。",
+    "explore": "逛逛",
+    "location": "门店",
+    "addressLine1": "示例地址",
+    "addressLine2": "Pasadena, CA",
+    "contact": "联系",
+    "email": "hello@idearcraft.example",
+    "comingSoon": "新品预告",
+    "copyright": "© {year} IDearCraft"
+  },
+  "cookie": {
+    "text": "我们使用 Cookie 改善体验与流量分析。继续浏览即表示你了解我们的做法（演示文案，可替换为真实政策链接）。",
+    "settings": "设置",
+    "declineAll": "全部拒绝",
+    "accept": "接受",
+    "aria": "Cookie 提示",
+    "settingsAlert": "演示站点：此处可接入 Cookie 设置面板。"
+  },
+  "home": {
+    "heroAlt": "手作工坊氛围",
+    "heroSubtitle": "原创「动手做」手作体验工坊",
+    "heroBody": "小班课程、派对策划与材料商店，把灵感变成摸得着的作品。",
+    "bookCta": "预约体验",
+    "shopCta": "逛逛商店",
+    "shopSectionEyebrow": "商店",
+    "shopSectionTitle": "Shop 精选",
+    "shopSectionSubtitle": "商店列表 → 商品页 → 购物车 → 结账。",
+    "shopCtaBottom": "进入商店",
+    "diySectionEyebrow": "DIY",
+    "diySectionTitle": "灵感项目",
+    "diySectionSubtitle": "周末就能完成的小目标。",
+    "diyCta": "更多灵感"
+  },
+  "offerings": {
+    "sectionTitle": "我们提供的服务",
+    "bookNow": "立即预约",
+    "learnMore": "了解更多",
+    "diy": {
+      "name": "DIY 项目",
+      "location": "到店体验",
+      "duration": "1 小时 30 分",
+      "blurb": "动手完成创意小项目，适合手作爱好者或单纯想放松一下；单次约 1.5 小时。",
+      "priceLabel": "每人 {price} 起"
+    },
+    "workshop": {
+      "name": "工作坊",
+      "location": "到店 · 导师带领",
+      "duration": "2–4 小时",
+      "blurb": "多种 2–4 小时主题工作坊，由导师带领，在引导中激发创造力并完成作品。",
+      "priceLabel": "每场 {price} 起"
+    },
+    "party": {
+      "name": "派对",
+      "location": "私人活动与庆祝",
+      "duration": "3 小时",
+      "blurb": "缤纷派对氛围与主题手作活动，适合聚会与庆祝，单次约 3 小时。",
+      "priceLabel": "每场派对 {price} 起"
+    }
+  },
+  "booking": {
+    "eyebrow": "在线预约",
+    "title": "我们提供的服务",
+    "intro": "与首页三项一致：选择服务后进入日期与时段。",
+    "pickSlots": "选择日期与时间",
+    "learnMore": "了解更多",
+    "bookNow": "立即预约",
+    "slotHint": "可预约日期加载完成后，即可选择具体时段（演示为 mock 数据）。"
+  },
+  "bookingDetail": {
+    "back": "← 返回服务列表"
+  },
+  "bookingFlow": {
+    "stepDate": "日期",
+    "stepTime": "时间",
+    "stepConfirm": "确认",
+    "pickDayTitle": "选择一天",
+    "pickDayHint": "演示：未来 10 天均可选。正式环境可接入 Cal.com、Wix Bookings 或自研库存。",
+    "available": "可预约",
+    "continueTime": "继续选择时间",
+    "pickTimeTitle": "选择时段",
+    "back": "返回",
+    "continueContact": "填写联系信息",
+    "confirmTitle": "确认预约",
+    "name": "姓名",
+    "nameHint": "用于签到与确认信",
+    "email": "邮箱",
+    "emailPlaceholder": "you@example.com",
+    "note": "备注（可选）",
+    "notePlaceholder": "过敏信息、儿童年龄、团建人数等",
+    "priceFrom": "{price} 起",
+    "submit": "提交预约申请",
+    "backEditTime": "返回修改时间",
+    "doneAlert": "演示完成：此处可接入支付定金或发送确认邮件。"
+  },
+  "shop": {
+    "eyebrow": "商店",
+    "title": "商店",
+    "intro": "浏览 → 商品页 → 加入购物车。",
+    "back": "← 返回商店"
+  },
+  "product": {
+    "addToCart": "加入购物车",
+    "added": "已加入购物车",
+    "goCart": "去购物车结算"
+  },
+  "cart": {
+    "title": "购物车",
+    "intro": "调整数量后进入结账页。",
+    "empty": "购物车还是空的，先去商店逛逛吧。",
+    "goShop": "前往商店",
+    "remove": "移除",
+    "subtotalHint": "小计（演示不含税与运费）",
+    "checkout": "去结账",
+    "clear": "清空购物车",
+    "clearConfirm": "确定清空购物车？"
+  },
+  "checkout": {
+    "title": "结账",
+    "intro": "三步：配送信息 → 确认订单 → 完成（演示无真实扣款）。",
+    "emptyTitle": "还没有商品",
+    "emptyBody": "请先加入购物车后再结账。",
+    "backShop": "返回商店",
+    "stepShipping": "配送",
+    "stepReview": "确认",
+    "stepDone": "完成",
+    "shippingTitle": "配送与联系",
+    "recipient": "收件人",
+    "emailOrder": "邮箱（订单确认）",
+    "address": "地址",
+    "continue": "继续",
+    "reviewTitle": "确认订单",
+    "total": "合计 {price}",
+    "backEdit": "返回修改",
+    "payMock": "模拟支付并完成",
+    "doneTitle": "谢谢惠顾！",
+    "doneBody": "订单已标记为完成（演示）。可继续购物或预约课程。",
+    "continueShopping": "继续购物",
+    "goBooking": "去预约体验"
+  },
+  "about": {
+    "eyebrow": "关于",
+    "title": "关于 IDearCraft",
+    "p1": "本页对应原站 /aboutus。我们用 Next.js 重建，语气延续温暖、邀请式的工作室首页风格。",
+    "p2": "我们相信手作不只是「学会技巧」，而是把注意力放回当下：选色、折线、打结——这些微小决定会堆叠成信心，也会堆叠成礼物。",
+    "cta": "预约来店里看看"
+  },
+  "diyPage": {
+    "eyebrow": "DIY 项目",
+    "title": "灵感项目墙",
+    "intro": "对应 /diyprojects。后续可接 CMS 或 Notion。"
+  },
+  "comingSoon": {
+    "eyebrow": "即将上线",
+    "title": "新系列正在路上",
+    "body": "原站包含 /coming-soon 路由。可用作预告、邮件订阅或倒计时。",
+    "home": "返回首页"
+  },
+  "common": {
+    "minutes": "分钟"
+  }
+}

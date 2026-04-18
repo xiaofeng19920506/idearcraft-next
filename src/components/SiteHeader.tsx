@@ -1,20 +1,22 @@
 "use client";
 
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Cat, Menu, ShoppingBag, X } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState, startTransition } from "react";
 
-const nav = [
-  { href: "/booking", label: "预约" },
-  { href: "/shop", label: "商店" },
-  { href: "/diyprojects", label: "DIY" },
-  { href: "/aboutus", label: "关于" },
-];
-
 export function SiteHeader() {
+  const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+
+  const nav = [
+    { href: "/booking", label: t("booking") },
+    { href: "/shop", label: t("shop") },
+    { href: "/diyprojects", label: t("diy") },
+    { href: "/aboutus", label: t("about") },
+  ] as const;
 
   useEffect(() => {
     startTransition(() => setOpen(false));
@@ -37,7 +39,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setOpen(true)}
             className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)] transition hover:bg-black/5"
-            aria-label="打开菜单"
+            aria-label={t("openMenu")}
           >
             <Menu className="h-6 w-6" strokeWidth={2.25} />
           </button>
@@ -56,13 +58,16 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          <Link
-            href="/cart"
-            className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)] transition hover:bg-black/5"
-            aria-label="购物车"
-          >
-            <ShoppingBag className="h-6 w-6" strokeWidth={2.25} />
-          </Link>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <LanguageSwitcher />
+            <Link
+              href="/cart"
+              className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)] transition hover:bg-black/5"
+              aria-label={t("cart")}
+            >
+              <ShoppingBag className="h-6 w-6" strokeWidth={2.25} />
+            </Link>
+          </div>
         </div>
 
         <nav className="hidden border-t border-black/10 px-6 py-2 md:block">
@@ -83,17 +88,17 @@ export function SiteHeader() {
           <button
             type="button"
             className="absolute inset-0 bg-black/40"
-            aria-label="关闭菜单"
+            aria-label={t("closeMenu")}
             onClick={() => setOpen(false)}
           />
           <div className="absolute left-0 top-0 flex h-full w-[min(100%,320px)] flex-col bg-white shadow-xl">
             <div className="flex items-center justify-between border-b border-[color:var(--line)] px-4 py-3">
-              <span className="font-display text-xl text-[color:var(--ink)]">菜单</span>
+              <span className="font-display text-xl text-[color:var(--ink)]">{t("menu")}</span>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)]"
-                aria-label="关闭"
+                aria-label={t("close")}
               >
                 <X className="h-6 w-6" />
               </button>
@@ -114,7 +119,7 @@ export function SiteHeader() {
                   href="/cart"
                   className="block rounded-lg px-4 py-3 text-lg font-semibold text-[color:var(--ink)] hover:bg-[color:var(--surface-2)]"
                 >
-                  购物车
+                  {t("cart")}
                 </Link>
               </li>
             </ul>
@@ -124,7 +129,7 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="block rounded-md bg-[color:var(--accent)] py-3 text-center text-sm font-semibold text-white"
               >
-                立即预约
+                {t("bookNow")}
               </Link>
             </div>
           </div>

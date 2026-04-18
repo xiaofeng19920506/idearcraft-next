@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "title": "IDearCraft",
+    "titleTemplate": "%s · IDearCraft",
+    "description": "Crafting Experience Services"
+  },
+  "nav": {
+    "booking": "Book",
+    "shop": "Shop",
+    "diy": "DIY",
+    "about": "About",
+    "cart": "Cart",
+    "bookNow": "Book now",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "close": "Close",
+    "language": "Language",
+    "en": "English",
+    "zh": "中文"
+  },
+  "footer": {
+    "tagline": "Handmade experience studio · Classes, parties & supplies.",
+    "explore": "Explore",
+    "location": "Location",
+    "addressLine1": "Sample address",
+    "addressLine2": "Pasadena, CA",
+    "contact": "Contact",
+    "email": "hello@idearcraft.example",
+    "comingSoon": "Coming soon",
+    "copyright": "© {year} IDearCraft"
+  },
+  "cookie": {
+    "text": "We use cookies to improve your experience and analytics. By continuing you agree to our practices (demo copy — replace with your policy).",
+    "settings": "Settings",
+    "declineAll": "Decline all",
+    "accept": "Accept",
+    "aria": "Cookie notice",
+    "settingsAlert": "Demo: wire your cookie settings panel here."
+  },
+  "home": {
+    "heroAlt": "Workshop atmosphere",
+    "heroSubtitle": "The original hands-on crafting workshop",
+    "heroBody": "Small classes, party planning & a supply shop — turn ideas into something you can hold.",
+    "bookCta": "Book a session",
+    "shopCta": "Browse the shop",
+    "shopSectionEyebrow": "Shop",
+    "shopSectionTitle": "Shop picks",
+    "shopSectionSubtitle": "Shop → product → cart → checkout.",
+    "shopCtaBottom": "Go to shop",
+    "diySectionEyebrow": "DIY",
+    "diySectionTitle": "Project ideas",
+    "diySectionSubtitle": "Weekend-sized goals.",
+    "diyCta": "More ideas"
+  },
+  "offerings": {
+    "sectionTitle": "Services we offer",
+    "bookNow": "Book Now",
+    "learnMore": "Learn More",
+    "diy": {
+      "name": "DIY Projects",
+      "location": "In-studio experience",
+      "duration": "1h 30mins",
+      "blurb": "Explore hands-on creative projects, perfect for crafting enthusiasts or just having fun! Projects last around 1.5 hours.",
+      "priceLabel": "From {price} / person"
+    },
+    "workshop": {
+      "name": "Workshop",
+      "location": "In-studio · guided sessions",
+      "duration": "2 Hours - 4 Hours",
+      "blurb": "Participate in various workshops that span 2 to 4 hours, designed to inspire creativity through guided activities with instructors.",
+      "priceLabel": "From {price} / session"
+    },
+    "party": {
+      "name": "Party",
+      "location": "Private events & celebrations",
+      "duration": "3 Hours",
+      "blurb": "Enjoy a vibrant party atmosphere with creative themes and activities, perfect for gatherings and celebrations, lasting around 3 hours.",
+      "priceLabel": "From {price} / party"
+    }
+  },
+  "booking": {
+    "eyebrow": "Book Online",
+    "title": "Services we offer",
+    "intro": "Same three services as the homepage. Pick one, then choose a date and time.",
+    "pickSlots": "Pick date & time",
+    "learnMore": "Learn more",
+    "bookNow": "Book Now",
+    "slotHint": "After dates load, pick a time slot (demo uses mock availability)."
+  },
+  "bookingDetail": {
+    "back": "← Back to services"
+  },
+  "bookingFlow": {
+    "stepDate": "Date",
+    "stepTime": "Time",
+    "stepConfirm": "Confirm",
+    "pickDayTitle": "Pick a day",
+    "pickDayHint": "Demo: next 10 days are open. Connect Cal.com, Wix Bookings, or your API in production.",
+    "available": "Available",
+    "continueTime": "Continue to time",
+    "pickTimeTitle": "Pick a time",
+    "back": "Back",
+    "continueContact": "Contact details",
+    "confirmTitle": "Confirm booking",
+    "name": "Name",
+    "nameHint": "For check-in & confirmation email",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "note": "Notes (optional)",
+    "notePlaceholder": "Allergies, kids’ ages, group size…",
+    "priceFrom": "{price} from",
+    "submit": "Submit booking request",
+    "backEditTime": "Back to change time",
+    "doneAlert": "Demo complete: add deposit payment or confirmation email here."
+  },
+  "shop": {
+    "eyebrow": "Shop",
+    "title": "Shop",
+    "intro": "Browse → product → add to cart.",
+    "back": "← Back to shop"
+  },
+  "product": {
+    "addToCart": "Add to cart",
+    "added": "Added",
+    "goCart": "Go to cart"
+  },
+  "cart": {
+    "title": "Cart",
+    "intro": "Adjust quantities, then checkout.",
+    "empty": "Your cart is empty.",
+    "goShop": "Go to shop",
+    "remove": "Remove",
+    "subtotalHint": "Subtotal (demo, excl. tax & shipping)",
+    "checkout": "Checkout",
+    "clear": "Clear cart",
+    "clearConfirm": "Clear the entire cart?"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "intro": "Shipping → review → done (demo, no real charge).",
+    "emptyTitle": "No items yet",
+    "emptyBody": "Add something to your cart before checking out.",
+    "backShop": "Back to shop",
+    "stepShipping": "Shipping",
+    "stepReview": "Review",
+    "stepDone": "Done",
+    "shippingTitle": "Shipping & contact",
+    "recipient": "Recipient",
+    "emailOrder": "Email (order confirmation)",
+    "address": "Address",
+    "continue": "Continue",
+    "reviewTitle": "Review order",
+    "total": "Total {price}",
+    "backEdit": "Back to edit",
+    "payMock": "Pay (demo) & complete",
+    "doneTitle": "Thank you!",
+    "doneBody": "Order marked complete (demo). Continue shopping or book a class.",
+    "continueShopping": "Keep shopping",
+    "goBooking": "Book a session"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About IDearCraft",
+    "p1": "This page maps to the original /aboutus route. We rebuilt the stack in Next.js; tone follows a warm, invitation-style studio site.",
+    "p2": "We believe making isn’t only about technique — it’s about slowing down: choosing colors, folds, knots — small decisions that add up to confidence and gifts.",
+    "cta": "Book a visit"
+  },
+  "diyPage": {
+    "eyebrow": "DIY Projects",
+    "title": "Inspiration wall",
+    "intro": "Maps to /diyprojects. Swap in CMS or Notion later."
+  },
+  "comingSoon": {
+    "eyebrow": "Coming Soon",
+    "title": "New collection on the way",
+    "body": "Framer search index included a /coming-soon route. Use this for teasers, email capture, or a countdown.",
+    "home": "Back to home"
+  },
+  "common": {
+    "minutes": "min"
+  }
+}

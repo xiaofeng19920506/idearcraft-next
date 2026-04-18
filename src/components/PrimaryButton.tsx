@@ -1,11 +1,10 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 type Common = {
   children: React.ReactNode;
   className?: string;
 };
 
-/** Plushumi 式主按钮：黑底、白字、略方圆角 */
 export function PrimaryButton({
   href,
   children,
@@ -21,7 +20,6 @@ export function PrimaryButton({
   );
 }
 
-/** 线框按钮：黑框透明底 */
 export function GhostButton({
   href,
   children,

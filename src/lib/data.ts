@@ -1,45 +1,29 @@
 import type { BookingService, DiyProject, Product } from "./types";
 
-/** 原站 idearcrafts.com 信息架构：首页、商店、预约、关于、DIY、即将上线 */
+/** 原站 idearcrafts.com 信息架构 */
 export const siteTagline = "Crafting Experience Services";
 
-/** 首页「Services we offer」与预约列表：与 idearcrafts.com 三项服务对齐 */
 export const bookingServices: BookingService[] = [
   {
     id: "s-diy-projects",
-    name: "DIY Projects",
-    location: "In-studio experience",
-    durationLabel: "1h 30mins",
+    messageKey: "diy",
     priceUsd: 45,
-    priceLabel: "From $45 / person",
-    blurb:
-      "Explore hands-on creative projects, perfect for crafting enthusiasts or just having fun! Projects last around 1.5 hours.",
     imageUrl:
       "https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?auto=format&fit=crop&w=900&q=80",
     learnMoreHref: "/diyprojects",
   },
   {
     id: "s-workshop",
-    name: "Workshop",
-    location: "In-studio · guided sessions",
-    durationLabel: "2 Hours - 4 Hours",
+    messageKey: "workshop",
     priceUsd: 95,
-    priceLabel: "From $95 / session",
-    blurb:
-      "Participate in various workshops that span 2 to 4 hours, designed to inspire creativity through guided activities with instructors.",
     imageUrl:
       "https://images.unsplash.com/photo-1615876237516-e998f650f836?auto=format&fit=crop&w=900&q=80",
     learnMoreHref: "/aboutus",
   },
   {
     id: "s-party",
-    name: "Party",
-    location: "Private events & celebrations",
-    durationLabel: "3 Hours",
+    messageKey: "party",
     priceUsd: 420,
-    priceLabel: "From $420 / party",
-    blurb:
-      "Enjoy a vibrant party atmosphere with creative themes and activities, perfect for gatherings and celebrations, lasting around 3 hours.",
     imageUrl:
       "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80",
     learnMoreHref: "/aboutus",

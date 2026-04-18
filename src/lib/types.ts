@@ -8,18 +8,13 @@ export type Product = {
   imageGradient: string;
 };
 
+/** 与 messages 中 offerings.{messageKey} 对应 */
 export type BookingService = {
   id: string;
-  name: string;
-  location: string;
-  durationLabel: string;
-  priceLabel: string;
+  messageKey: "diy" | "workshop" | "party";
   priceUsd: number;
-  /** 列表 / 首页卡片说明（与 idearcrafts.com Services we offer 一致） */
-  blurb: string;
-  /** 首页服务卡片配图 */
   imageUrl: string;
-  /** 「Learn more」跳转 */
+  /** 无 locale 前缀的路径，由 next-intl Link 自动加前缀 */
   learnMoreHref: string;
 };
 
