@@ -33,3 +33,72 @@ body {
 ::selection {
   background: color-mix(in srgb, var(--brand) 35%, white);
 }
+
+/* 键盘焦点可见性（保留鼠标点击时的浏览器默认，仅强化键盘 focus-visible） */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* 仅屏幕阅读器可见（补充 Tailwind sr-only 场景） */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+ * 可点击控件统一 pointer。不使用 @layer，并配合 !important，避免被 Tailwind preflight
+ * 或其它层叠顺序盖住（此前放在 @layer base 里容易不生效）。
+ * 纯文本输入区保留 I 形光标。
+ */
+a[href]:not([aria-disabled="true"]),
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+[role="menuitem"]:not([aria-disabled="true"]),
+[role="tab"]:not([aria-disabled="true"]),
+[role="link"]:not([aria-disabled="true"]),
+[role="switch"]:not([aria-disabled="true"]),
+label[for],
+select:not(:disabled),
+summary,
+input[type="submit"]:not(:disabled),
+input[type="button"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled),
+input[type="file"]:not(:disabled),
+input[type="range"]:not(:disabled),
+input[type="image"]:not(:disabled),
+input[type="color"]:not(:disabled),
+input[type="number"]:not(:disabled),
+input[type="date"]:not(:disabled),
+input[type="datetime-local"]:not(:disabled),
+input[type="time"]:not(:disabled),
+input[type="month"]:not(:disabled),
+input[type="week"]:not(:disabled),
+::file-selector-button {
+  cursor: pointer !important;
+}
+
+button:disabled,
+[aria-disabled="true"],
+:disabled {
+  cursor: not-allowed !important;
+}
+
+input[type="text"]:not(:disabled),
+input[type="email"]:not(:disabled),
+input[type="search"]:not(:disabled),
+input[type="tel"]:not(:disabled),
+input[type="url"]:not(:disabled),
+input[type="password"]:not(:disabled),
+textarea:not(:disabled) {
+  cursor: text !important;
+}

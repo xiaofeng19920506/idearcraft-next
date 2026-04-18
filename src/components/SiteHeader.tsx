@@ -4,12 +4,13 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Cat, Menu, ShoppingBag, X } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useEffect, useState, startTransition } from "react";
+import { useEffect, useRef, useState, startTransition } from "react";
 
 export function SiteHeader() {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   const nav = [
     { href: "/booking", label: t("booking") },
@@ -30,6 +31,7 @@ export function SiteHeader() {
       if (e.key === "Escape") startTransition(() => setOpen(false));
     };
     window.addEventListener("keydown", onKey);
+    closeBtnRef.current?.focus();
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
@@ -38,7 +40,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-[color:var(--brand)] shadow-sm">
+      <header role="banner" className="sticky top-0 z-50 bg-[color:var(--brand)] shadow-sm">
         <div className="relative mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6">
           <button
             type="button"
@@ -48,11 +50,12 @@ export function SiteHeader() {
             className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)] transition hover:bg-black/5"
             aria-label={t("openMenu")}
           >
-            <Menu className="h-6 w-6" strokeWidth={2.25} />
+            <Menu className="pointer-events-none h-6 w-6" strokeWidth={2.25} aria-hidden />
           </button>
 
           <Link
             href="/"
+            aria-label={t("home")}
             className="absolute left-1/2 flex -translate-x-1/2 flex-col items-center gap-0.5 sm:flex-row sm:gap-1.5"
           >
             <Cat
@@ -72,14 +75,14 @@ export function SiteHeader() {
               className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)] transition hover:bg-black/5"
               aria-label={t("cart")}
             >
-              <ShoppingBag className="h-6 w-6" strokeWidth={2.25} />
+              <ShoppingBag className="h-6 w-6" strokeWidth={2.25} aria-hidden />
             </Link>
           </div>
         </div>
       </header>
 
       {open ? (
-        <div className="fixed inset-0 z-[70]">
+        <div className="fixed inset-0 z-[70]" role="presentation">
           <button
             type="button"
             className="absolute inset-0 bg-black/40"
@@ -88,39 +91,47 @@ export function SiteHeader() {
           />
           <div
             id="site-nav-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="site-nav-drawer-title"
             className="absolute left-0 top-0 flex h-full w-full max-w-sm flex-col bg-white shadow-xl"
           >
             <div className="flex items-center justify-between border-b border-[color:var(--line)] px-4 py-3">
-              <span className="font-display text-xl text-[color:var(--ink)]">{t("menu")}</span>
+              <span id="site-nav-drawer-title" className="font-display text-xl text-[color:var(--ink)]">
+                {t("menu")}
+              </span>
               <button
+                ref={closeBtnRef}
                 type="button"
                 onClick={() => setOpen(false)}
-                className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)]"
+                className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)] transition hover:bg-black/5"
                 aria-label={t("close")}
               >
-                <X className="h-6 w-6" />
+                <X className="pointer-events-none h-6 w-6" aria-hidden />
               </button>
             </div>
-            <ul className="flex flex-1 flex-col gap-1 p-3">
-              {nav.map((item) => (
-                <li key={item.href}>
+            <nav aria-label={t("drawerNav")} className="flex min-h-0 flex-1 flex-col">
+              <ul className="flex flex-1 flex-col gap-1 overflow-y-auto p-3">
+                {nav.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="block rounded-lg px-4 py-3 text-lg font-semibold text-[color:var(--ink)] hover:bg-[color:var(--surface-2)]"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
                   <Link
-                    href={item.href}
+                    href="/cart"
                     className="block rounded-lg px-4 py-3 text-lg font-semibold text-[color:var(--ink)] hover:bg-[color:var(--surface-2)]"
                   >
-                    {item.label}
+                    {t("cart")}
                   </Link>
                 </li>
-              ))}
-              <li>
-                <Link
-                  href="/cart"
-                  className="block rounded-lg px-4 py-3 text-lg font-semibold text-[color:var(--ink)] hover:bg-[color:var(--surface-2)]"
-                >
-                  {t("cart")}
-                </Link>
-              </li>
-            </ul>
+              </ul>
+            </nav>
             <div className="border-t border-[color:var(--line)] p-4">
               <Link
                 href="/booking"

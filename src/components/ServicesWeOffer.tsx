@@ -10,9 +10,15 @@ export async function ServicesWeOffer() {
   const priceLocale = locale === "zh" ? "zh" : "en";
 
   return (
-    <section className="border-y border-[color:var(--line)] bg-[#faf9f6] py-16 sm:py-20">
+    <section
+      className="border-y border-[color:var(--line)] bg-[#faf9f6] py-16 sm:py-20"
+      aria-labelledby="services-we-offer-title"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-center text-2xl font-bold tracking-tight text-neutral-700 sm:text-3xl">
+        <h2
+          id="services-we-offer-title"
+          className="text-center text-2xl font-bold tracking-tight text-neutral-700 sm:text-3xl"
+        >
           {t("sectionTitle")}
         </h2>
 

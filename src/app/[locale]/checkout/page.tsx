@@ -27,7 +27,7 @@ export default function CheckoutPage() {
 
   if (items.length === 0 && step !== "done") {
     return (
-      <main className="mx-auto max-w-lg px-4 py-16 text-center sm:px-6">
+      <div className="mx-auto max-w-lg px-4 py-16 text-center sm:px-6">
         <h1 className="font-display text-3xl text-[color:var(--ink)]">{t("emptyTitle")}</h1>
         <p className="mt-3 text-sm text-[color:var(--muted)]">{t("emptyBody")}</p>
         <button
@@ -37,7 +37,7 @@ export default function CheckoutPage() {
         >
           {t("backShop")}
         </button>
-      </main>
+      </div>
     );
   }
 
@@ -48,7 +48,7 @@ export default function CheckoutPage() {
   ];
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <h1 className="font-display text-4xl text-[color:var(--ink)]">{t("title")}</h1>
       <p className="mt-2 text-sm text-[color:var(--muted)]">{t("intro")}</p>
 
@@ -78,27 +78,33 @@ export default function CheckoutPage() {
       {step === "shipping" ? (
         <div className="mt-8 space-y-4 rounded-[1.75rem] border border-[color:var(--line)] bg-white/90 p-6">
           <h2 className="font-display text-2xl text-[color:var(--ink)]">{t("shippingTitle")}</h2>
-          <label className="block text-sm font-medium text-[color:var(--ink-soft)]">
+          <label htmlFor="checkout-recipient" className="block text-sm font-medium text-[color:var(--ink-soft)]">
             {t("recipient")}
             <input
+              id="checkout-recipient"
+              autoComplete="name"
               className="mt-1 w-full rounded-2xl border border-[color:var(--line)] bg-white px-3 py-2 text-sm outline-none ring-[color:var(--brand)]/35 focus:ring-2"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </label>
-          <label className="block text-sm font-medium text-[color:var(--ink-soft)]">
+          <label htmlFor="checkout-email" className="block text-sm font-medium text-[color:var(--ink-soft)]">
             {t("emailOrder")}
             <input
+              id="checkout-email"
               type="email"
+              autoComplete="email"
               className="mt-1 w-full rounded-2xl border border-[color:var(--line)] bg-white px-3 py-2 text-sm outline-none ring-[color:var(--brand)]/35 focus:ring-2"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
-          <label className="block text-sm font-medium text-[color:var(--ink-soft)]">
+          <label htmlFor="checkout-address" className="block text-sm font-medium text-[color:var(--ink-soft)]">
             {t("address")}
             <textarea
+              id="checkout-address"
               rows={3}
+              autoComplete="street-address"
               className="mt-1 w-full rounded-2xl border border-[color:var(--line)] bg-white px-3 py-2 text-sm outline-none ring-[color:var(--brand)]/35 focus:ring-2"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -182,6 +188,6 @@ export default function CheckoutPage() {
           </div>
         </div>
       ) : null}
-    </main>
+    </div>
   );
 }

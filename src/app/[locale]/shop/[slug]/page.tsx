@@ -1,6 +1,7 @@
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { getProductBySlug } from "@/lib/data";
 import { formatUsd } from "@/lib/format";
+import { getMetadataBase } from "@/lib/site";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -18,6 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: tProducts(`${product.messageKey}.name`),
     description: tProducts(`${product.messageKey}.shortDescription`),
+    alternates: {
+      canonical: new URL(`/${locale}/shop/${slug}`, getMetadataBase()).toString(),
+    },
   };
 }
 
@@ -33,7 +37,7 @@ export default async function ProductPage({ params }: Props) {
   const priceLocale = locale === "zh" ? "zh" : "en";
 
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
       <Link
         href="/shop"
         className="text-sm font-semibold text-[color:var(--accent-strong)] hover:underline"
@@ -65,6 +69,6 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

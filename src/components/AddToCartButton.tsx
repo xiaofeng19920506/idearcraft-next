@@ -17,6 +17,8 @@ export function AddToCartButton({ productId }: { productId: string }) {
         setDone(true);
         window.setTimeout(() => setDone(false), 1600);
       }}
+      aria-busy={done}
+      aria-label={done ? t("added") : t("addToCart")}
       className="w-full rounded-md bg-[color:var(--accent)] py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 sm:w-auto sm:px-10"
     >
       {done ? t("added") : t("addToCart")}

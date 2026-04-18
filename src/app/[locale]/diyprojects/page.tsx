@@ -1,5 +1,6 @@
 import { DiyProjectsSection } from "@/components/diy/DiyProjectsSection";
 import { getDiyProjects } from "@/content/diy-projects";
+import { getMetadataBase } from "@/lib/site";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
@@ -9,7 +10,14 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
-  return { title: t("diy") };
+  const tPage = await getTranslations({ locale, namespace: "diyPage" });
+  return {
+    title: t("diy"),
+    description: tPage("intro"),
+    alternates: {
+      canonical: new URL(`/${locale}/diyprojects`, getMetadataBase()).toString(),
+    },
+  };
 }
 
 export default async function DiyProjectsPage({ params }: Props) {
@@ -19,7 +27,7 @@ export default async function DiyProjectsPage({ params }: Props) {
   const projects = getDiyProjects(locale);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <header className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
           {t("eyebrow")}
@@ -29,6 +37,6 @@ export default async function DiyProjectsPage({ params }: Props) {
       </header>
 
       <DiyProjectsSection projects={projects} gridDuration={t("gridDuration")} />
-    </main>
+    </div>
   );
 }

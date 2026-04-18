@@ -38,10 +38,14 @@ export function CookieConsent() {
     <div
       className="fixed inset-x-0 bottom-0 z-[60] border-t border-[color:var(--line)] bg-white px-4 py-4 shadow-[0_-8px_30px_rgba(0,0,0,0.08)] sm:px-6"
       role="dialog"
+      aria-modal="true"
       aria-label={t("aria")}
+      aria-describedby="cookie-consent-text"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="max-w-2xl text-sm leading-relaxed text-[color:var(--muted)]">{t("text")}</p>
+        <p id="cookie-consent-text" className="max-w-2xl text-sm leading-relaxed text-[color:var(--muted)]">
+          {t("text")}
+        </p>
         <div className="flex flex-wrap items-center justify-end gap-2 sm:shrink-0">
           <button
             type="button"

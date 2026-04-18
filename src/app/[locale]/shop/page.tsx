@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { products } from "@/lib/data";
 import { formatUsd } from "@/lib/format";
+import { getMetadataBase } from "@/lib/site";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
@@ -10,7 +11,13 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "shop" });
-  return { title: t("title"), description: t("intro") };
+  return {
+    title: t("title"),
+    description: t("intro"),
+    alternates: {
+      canonical: new URL(`/${locale}/shop`, getMetadataBase()).toString(),
+    },
+  };
 }
 
 export default async function ShopPage({ params }: Props) {
@@ -21,7 +28,7 @@ export default async function ShopPage({ params }: Props) {
   const priceLocale = locale === "zh" ? "zh" : "en";
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <header className="max-w-2xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
           {t("eyebrow")}
@@ -52,6 +59,6 @@ export default async function ShopPage({ params }: Props) {
           </Link>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

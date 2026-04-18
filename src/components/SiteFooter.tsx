@@ -9,9 +9,13 @@ const SOCIAL = {
 
 export async function SiteFooter() {
   const t = await getTranslations("footer");
+  const ta = await getTranslations("a11y");
 
   return (
-    <footer className="mt-auto border-t border-[color:var(--line)] bg-white pb-24 pt-12 md:pb-12">
+    <footer
+      role="contentinfo"
+      className="mt-auto border-t border-[color:var(--line)] bg-white pb-24 pt-12 md:pb-12"
+    >
       <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 lg:col-span-1">
           <p className="font-display text-3xl text-[color:var(--ink)]">IDearCraft</p>
@@ -56,6 +60,7 @@ export async function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[color:var(--ink)]"
+                aria-label={`${t("instagram")} — ${ta("opensNewTab")}`}
               >
                 {t("instagram")}
               </a>
@@ -66,6 +71,7 @@ export async function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[color:var(--ink)]"
+                aria-label={`${t("tiktok")} — ${ta("opensNewTab")}`}
               >
                 {t("tiktok")}
               </a>
@@ -76,6 +82,7 @@ export async function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[color:var(--ink)]"
+                aria-label={`${t("xiaohongshu")} — ${ta("opensNewTab")}`}
               >
                 {t("xiaohongshu")}
               </a>

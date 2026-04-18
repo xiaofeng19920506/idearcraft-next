@@ -7,6 +7,8 @@ import { products } from "@/lib/data";
 import { Link } from "@/i18n/navigation";
 import { Heart } from "lucide-react";
 import Image from "next/image";
+import { getMetadataBase } from "@/lib/site";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
@@ -15,6 +17,15 @@ const HERO_IMAGE =
   "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=2000&q=85";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    alternates: {
+      canonical: new URL(`/${locale}`, getMetadataBase()).toString(),
+    },
+  };
+}
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
@@ -28,7 +39,7 @@ export default async function HomePage({ params }: Props) {
   const diyFeatured = getDiyProjects(locale).slice(0, 3);
 
   return (
-    <main className="bg-white">
+    <div className="bg-white">
       <section className="relative min-h-[calc(100dvh-3.5rem)] w-full sm:min-h-[calc(100dvh-4rem)]">
         <Image
           src={HERO_IMAGE}
@@ -68,6 +79,7 @@ export default async function HomePage({ params }: Props) {
       <ServicesWeOffer />
 
       <Section
+        titleId="home-shop-heading"
         eyebrow={th("shopSectionEyebrow")}
         title={th("shopSectionTitle")}
         subtitle={th("shopSectionSubtitle")}
@@ -100,6 +112,7 @@ export default async function HomePage({ params }: Props) {
       </Section>
 
       <Section
+        titleId="home-diy-heading"
         eyebrow={th("diySectionEyebrow")}
         title={th("diySectionTitle")}
         subtitle={th("diySectionSubtitle")}
@@ -124,6 +137,6 @@ export default async function HomePage({ params }: Props) {
           <PrimaryButton href="/diyprojects">{th("diyCta")}</PrimaryButton>
         </div>
       </Section>
-    </main>
+    </div>
   );
 }

@@ -4,7 +4,9 @@ import type { DiyProjectRecord } from "@/content/diy-projects";
 import { Link } from "@/i18n/navigation";
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
+
+const DIALOG_ID = "diy-project-price-dialog";
 
 type Props = {
   projects: DiyProjectRecord[];
@@ -14,7 +16,9 @@ type Props = {
 
 export function DiyProjectsSection({ projects, gridDuration }: Props) {
   const t = useTranslations("diyPage");
+  const descId = useId();
   const [open, setOpen] = useState<DiyProjectRecord | null>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   const onClose = useCallback(() => setOpen(null), []);
 
@@ -25,6 +29,7 @@ export function DiyProjectsSection({ projects, gridDuration }: Props) {
     if (open) {
       window.addEventListener("keydown", onKey);
       document.body.style.overflow = "hidden";
+      closeBtnRef.current?.focus();
     }
     return () => {
       window.removeEventListener("keydown", onKey);
@@ -50,6 +55,9 @@ export function DiyProjectsSection({ projects, gridDuration }: Props) {
             <button
               type="button"
               onClick={() => setOpen(p)}
+              aria-haspopup="dialog"
+              aria-expanded={open?.slug === p.slug}
+              aria-controls={DIALOG_ID}
               className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-[color:var(--ink)] bg-transparent py-2.5 text-sm font-semibold text-[color:var(--ink)] transition hover:bg-[color:var(--surface-2)]"
             >
               {t("priceList")}
@@ -64,6 +72,7 @@ export function DiyProjectsSection({ projects, gridDuration }: Props) {
           role="dialog"
           aria-modal="true"
           aria-labelledby="diy-dialog-title"
+          aria-describedby={descId}
         >
           <button
             type="button"
@@ -71,12 +80,16 @@ export function DiyProjectsSection({ projects, gridDuration }: Props) {
             onClick={onClose}
             aria-label={t("close")}
           />
-          <div className="relative flex max-h-[min(90dvh,880px)] w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-xl">
+          <div
+            id={DIALOG_ID}
+            className="relative flex max-h-[min(90dvh,880px)] w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-xl"
+          >
             <div className="flex items-start justify-between gap-3 border-b border-[color:var(--line)] px-5 py-4">
               <h2 id="diy-dialog-title" className="font-display text-2xl text-[color:var(--ink)]">
                 {open.title}
               </h2>
               <button
+                ref={closeBtnRef}
                 type="button"
                 onClick={onClose}
                 className="rounded-full p-2 text-[color:var(--muted)] hover:bg-[color:var(--surface-2)] hover:text-[color:var(--ink)]"
@@ -86,6 +99,9 @@ export function DiyProjectsSection({ projects, gridDuration }: Props) {
               </button>
             </div>
             <div className="overflow-y-auto px-5 py-4 text-sm leading-relaxed text-neutral-700">
+              <p id={descId} className="sr-only">
+                {t("dialogDescription")}
+              </p>
               <DiyDialogBody project={open} />
             </div>
           </div>
@@ -132,11 +148,18 @@ function DiyDialogBody({ project: p }: { project: DiyProjectRecord }) {
         {p.priceRows.length > 0 ? (
           <div className="mt-4 overflow-x-auto rounded-xl border border-[color:var(--line)]">
             <table className="w-full min-w-[280px] border-collapse text-left text-xs sm:text-sm">
+              <caption className="sr-only">{t("priceTableCaption")}</caption>
               <thead className="bg-[color:var(--surface-2)] text-[color:var(--ink)]">
                 <tr>
-                  <th className="px-3 py-2 font-semibold">{t("tableItem")}</th>
-                  <th className="px-3 py-2 font-semibold">{t("tableSize")}</th>
-                  <th className="px-3 py-2 font-semibold">{t("tablePrice")}</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">
+                    {t("tableItem")}
+                  </th>
+                  <th scope="col" className="px-3 py-2 font-semibold">
+                    {t("tableSize")}
+                  </th>
+                  <th scope="col" className="px-3 py-2 font-semibold">
+                    {t("tablePrice")}
+                  </th>
                 </tr>
               </thead>
               <tbody>

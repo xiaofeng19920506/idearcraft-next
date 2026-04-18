@@ -13,7 +13,7 @@ export default function CartPage() {
   const { items, subtotalUsd, setQty, remove, clear } = useCart();
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <h1 className="font-display text-4xl text-[color:var(--ink)]">{t("title")}</h1>
       <p className="mt-2 text-sm text-[color:var(--muted)]">{t("intro")}</p>
 
@@ -51,6 +51,7 @@ export default function CartPage() {
                   min={1}
                   value={qty}
                   onChange={(e) => setQty(product.id, Number(e.target.value))}
+                  aria-label={t("qtyAria")}
                   className="w-20 rounded-2xl border border-[color:var(--line)] bg-white px-2 py-2 text-center text-sm"
                 />
                 <button
@@ -91,6 +92,6 @@ export default function CartPage() {
           </div>
         </div>
       )}
-    </main>
+    </div>
   );
 }

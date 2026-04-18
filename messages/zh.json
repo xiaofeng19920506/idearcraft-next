@@ -3,11 +3,19 @@
     "title": "IDearCraft",
     "titleTemplate": "%s · IDearCraft",
     "description": "手作体验服务 Crafting Experience Services",
+    "keywords": "IDearCraft, DIY, 费城, 手作, 工作坊, 派对, 商店",
+    "ogImageAlt": "IDearCraft 手作工坊与课程氛围",
     "cart": "购物车",
     "checkout": "结账",
     "about": "关于我们",
     "diy": "DIY 灵感",
     "comingSoon": "即将上线"
+  },
+  "a11y": {
+    "skipToContent": "跳到主要内容",
+    "mainLabel": "主要内容",
+    "servicesSection": "我们提供的服务",
+    "opensNewTab": "在新标签页打开"
   },
   "nav": {
     "booking": "预约",
@@ -22,7 +30,11 @@
     "close": "关闭",
     "language": "语言",
     "en": "English",
-    "zh": "中文"
+    "zh": "中文",
+    "home": "IDearCraft — 首页",
+    "mainNav": "主导航",
+    "drawerNav": "全站导航",
+    "languageSwitcher": "语言切换"
   },
   "footer": {
     "tagline": "手作体验工作室 · 课程、派对与材料商店。",
@@ -47,6 +59,7 @@
     "declineAll": "全部拒绝",
     "accept": "接受",
     "aria": "Cookie 提示",
+    "dialogDescription": "在启用可选 Cookie 之前征求你的同意。",
     "settingsAlert": "演示站点：此处可接入 Cookie 设置面板。"
   },
   "home": {
@@ -156,6 +169,7 @@
   },
   "cart": {
     "title": "购物车",
+    "qtyAria": "该商品数量",
     "intro": "调整数量后进入结账页。",
     "empty": "购物车还是空的，先去商店逛逛吧。",
     "goShop": "前往商店",
@@ -212,7 +226,9 @@
     "tableItem": "项目",
     "tableSize": "尺寸",
     "tablePrice": "价格",
-    "close": "关闭"
+    "close": "关闭",
+    "dialogDescription": "项目说明、预约费、预计时间与价目表。",
+    "priceTableCaption": "按项目与尺寸的价目表"
   },
   "comingSoon": {
     "eyebrow": "即将上线",

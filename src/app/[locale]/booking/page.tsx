@@ -1,6 +1,7 @@
 import { bookingServices } from "@/lib/data";
 import { formatUsd } from "@/lib/format";
 import { Link } from "@/i18n/navigation";
+import { getMetadataBase } from "@/lib/site";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
@@ -11,7 +12,13 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "booking" });
-  return { title: t("title") };
+  return {
+    title: t("title"),
+    description: t("intro"),
+    alternates: {
+      canonical: new URL(`/${locale}/booking`, getMetadataBase()).toString(),
+    },
+  };
 }
 
 export default async function BookingListingPage({ params }: Props) {
@@ -22,7 +29,7 @@ export default async function BookingListingPage({ params }: Props) {
   const priceLocale = locale === "zh" ? "zh" : "en";
 
   return (
-    <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
       <header className="text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand)]">
           {t("eyebrow")}
@@ -83,6 +90,6 @@ export default async function BookingListingPage({ params }: Props) {
           );
         })}
       </div>
-    </main>
+    </div>
   );
 }

@@ -3,11 +3,19 @@
     "title": "IDearCraft",
     "titleTemplate": "%s · IDearCraft",
     "description": "Crafting Experience Services",
+    "keywords": "IDearCraft, DIY workshop, Philadelphia, handmade, crafting classes, party, shop",
+    "ogImageAlt": "Hands-on crafting and workshop atmosphere at IDearCraft",
     "cart": "Cart",
     "checkout": "Checkout",
     "about": "About",
     "diy": "DIY",
     "comingSoon": "Coming soon"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "mainLabel": "Main content",
+    "servicesSection": "Services we offer",
+    "opensNewTab": "opens in a new tab"
   },
   "nav": {
     "booking": "Book",
@@ -22,7 +30,11 @@
     "close": "Close",
     "language": "Language",
     "en": "English",
-    "zh": "中文"
+    "zh": "中文",
+    "home": "IDearCraft — Home",
+    "mainNav": "Primary",
+    "drawerNav": "Site navigation",
+    "languageSwitcher": "Language"
   },
   "footer": {
     "tagline": "Handmade experience studio · Classes, parties & supplies.",
@@ -47,6 +59,7 @@
     "declineAll": "Decline all",
     "accept": "Accept",
     "aria": "Cookie notice",
+    "dialogDescription": "We ask for your consent before using optional cookies.",
     "settingsAlert": "Demo: wire your cookie settings panel here."
   },
   "home": {
@@ -156,6 +169,7 @@
   },
   "cart": {
     "title": "Cart",
+    "qtyAria": "Quantity for this item",
     "intro": "Adjust quantities, then checkout.",
     "empty": "Your cart is empty.",
     "goShop": "Go to shop",
@@ -212,7 +226,9 @@
     "tableItem": "Item",
     "tableSize": "Size",
     "tablePrice": "Price",
-    "close": "Close"
+    "close": "Close",
+    "dialogDescription": "Project details, reservation fee, duration, and price list.",
+    "priceTableCaption": "Price list by item and size"
   },
   "comingSoon": {
     "eyebrow": "Coming Soon",
