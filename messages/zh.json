@@ -26,14 +26,20 @@
   },
   "footer": {
     "tagline": "手作体验工作室 · 课程、派对与材料商店。",
-    "explore": "逛逛",
-    "location": "门店",
-    "addressLine1": "示例地址",
-    "addressLine2": "Pasadena, CA",
-    "contact": "联系",
-    "email": "hello@idearcraft.example",
-    "comingSoon": "新品预告",
-    "copyright": "© {year} IDearCraft"
+    "addressLine1": "3804 Lancaster Ave,",
+    "addressLine2": "Philadelphia, PA 19104",
+    "madeWith": "由 IDearCraft 倾情呈现 ❤️",
+    "hoursTitle": "营业时间",
+    "hoursMonThu": "周一至周四：11:30 - 20:00",
+    "hoursFriSun": "周五至周日：11:30 - 20:30",
+    "aboutTitle": "关于",
+    "ourStory": "我们的故事",
+    "contactUs": "联系我们",
+    "contactTitle": "联系方式",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "xiaohongshu": "小红书",
+    "copyright": "© 2026 IDearCraft"
   },
   "cookie": {
     "text": "我们使用 Cookie 改善体验与流量分析。继续浏览即表示你了解我们的做法（演示文案，可替换为真实政策链接）。",
@@ -126,6 +132,23 @@
     "back": "← 返回商店",
     "notFound": "商品未找到"
   },
+  "shopProducts": {
+    "atelierStarterKit": {
+      "name": "手作入门材料包",
+      "shortDescription": "含工具与基础材料，适合第一次体验。",
+      "description": "精选纸张、线材与基础工具，搭配图文教程，让你在家也能延续工作室的体验节奏。"
+    },
+    "seasonalGiftBox": {
+      "name": "节日礼盒 · 限定配色",
+      "shortDescription": "包装与配色随季节更新，适合送礼。",
+      "description": "内含三款小型手作项目，附手写祝福卡与礼品包装。数量有限，售完即止。"
+    },
+    "studioMerchCap": {
+      "name": "工作室周边 · 棒球帽",
+      "shortDescription": "刺绣 Logo，日常佩戴也舒适。",
+      "description": "透气棉质面料，低调刺绣。支持到店自取或快递配送（结账时填写地址）。"
+    }
+  },
   "product": {
     "addToCart": "加入购物车",
     "added": "已加入购物车",
@@ -170,12 +193,26 @@
     "title": "关于 IDearCraft",
     "p1": "本页对应原站 /aboutus。我们用 Next.js 重建，语气延续温暖、邀请式的工作室首页风格。",
     "p2": "我们相信手作不只是「学会技巧」，而是把注意力放回当下：选色、折线、打结——这些微小决定会堆叠成信心，也会堆叠成礼物。",
-    "cta": "预约来店里看看"
+    "cta": "预约来店里看看",
+    "contactTitle": "联系与派对预约",
+    "contactBody": "团体派对与包场方案需与工作室直接确认档期与人数。请通过页脚的 Instagram（@idearcrafts）、TikTok（@idearcrafts）或小红书私信联系，我们会尽快回复。"
   },
   "diyPage": {
     "eyebrow": "DIY 项目",
-    "title": "灵感项目墙",
-    "intro": "对应 /diyprojects。后续可接 CMS 或 Notion。"
+    "title": "DIY 项目",
+    "intro": "我们提供 DIY 项目、工作坊与派对等多种服务。请浏览下方项目卡片，点击「价目表」查看说明、估价与预约方式（与原站 idearcrafts.com/diyprojects 流程一致）。",
+    "gridDuration": "约 1 小时 30 分钟",
+    "tagDiy": "DIY",
+    "tagParty": "派对",
+    "priceList": "价目表",
+    "reservationFee": "预约费",
+    "estimatedTime": "预计时间",
+    "priceHeading": "价格",
+    "bookNow": "立即预约",
+    "tableItem": "项目",
+    "tableSize": "尺寸",
+    "tablePrice": "价格",
+    "close": "关闭"
   },
   "comingSoon": {
     "eyebrow": "即将上线",

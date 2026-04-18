@@ -1,9 +1,8 @@
+/** 文案见 messages 中 `shopProducts.{messageKey}` */
 export type Product = {
   id: string;
   slug: string;
-  name: string;
-  shortDescription: string;
-  description: string;
+  messageKey: "atelierStarterKit" | "seasonalGiftBox" | "studioMerchCap";
   priceUsd: number;
   imageGradient: string;
 };
@@ -16,12 +15,4 @@ export type BookingService = {
   imageUrl: string;
   /** 无 locale 前缀的路径，由 next-intl Link 自动加前缀 */
   learnMoreHref: string;
-};
-
-export type DiyProject = {
-  id: string;
-  title: string;
-  summary: string;
-  difficulty: "入门" | "进阶" | "挑战";
-  minutes: number;
 };

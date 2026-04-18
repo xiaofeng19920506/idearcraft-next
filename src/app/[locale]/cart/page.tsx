@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 export default function CartPage() {
   const t = useTranslations("cart");
+  const tProducts = useTranslations("shopProducts");
   const locale = useLocale();
   const priceLocale = locale === "zh" ? "zh" : "en";
   const { items, subtotalUsd, setQty, remove, clear } = useCart();
@@ -36,7 +37,9 @@ export default function CartPage() {
               <div className="flex items-center gap-4">
                 <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${product.imageGradient}`} />
                 <div>
-                  <p className="font-semibold text-[color:var(--ink)]">{product.name}</p>
+                  <p className="font-semibold text-[color:var(--ink)]">
+                    {tProducts(`${product.messageKey}.name`)}
+                  </p>
                   <p className="text-sm text-[color:var(--muted)]">
                     {formatUsd(product.priceUsd, priceLocale)}
                   </p>

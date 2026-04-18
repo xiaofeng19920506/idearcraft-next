@@ -13,8 +13,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const product = getProductBySlug(slug);
   const t = await getTranslations({ locale, namespace: "shop" });
+  const tProducts = await getTranslations({ locale, namespace: "shopProducts" });
   if (!product) return { title: t("notFound") };
-  return { title: product.name, description: product.shortDescription };
+  return {
+    title: tProducts(`${product.messageKey}.name`),
+    description: tProducts(`${product.messageKey}.shortDescription`),
+  };
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -25,6 +29,7 @@ export default async function ProductPage({ params }: Props) {
 
   const t = await getTranslations("shop");
   const tp = await getTranslations("product");
+  const tProducts = await getTranslations("shopProducts");
   const priceLocale = locale === "zh" ? "zh" : "en";
 
   return (
@@ -40,11 +45,15 @@ export default async function ProductPage({ params }: Props) {
           className={`aspect-[4/3] w-full rounded-[2rem] border border-[color:var(--line)] bg-gradient-to-br shadow-inner ${product.imageGradient}`}
         />
         <div>
-          <h1 className="font-display text-4xl text-[color:var(--ink)]">{product.name}</h1>
+          <h1 className="font-display text-4xl text-[color:var(--ink)]">
+            {tProducts(`${product.messageKey}.name`)}
+          </h1>
           <p className="mt-3 text-2xl font-semibold text-[color:var(--accent-strong)]">
             {formatUsd(product.priceUsd, priceLocale)}
           </p>
-          <p className="mt-6 text-base leading-relaxed text-[color:var(--muted)]">{product.description}</p>
+          <p className="mt-6 text-base leading-relaxed text-[color:var(--muted)]">
+            {tProducts(`${product.messageKey}.description`)}
+          </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <AddToCartButton productId={product.id} />
             <Link

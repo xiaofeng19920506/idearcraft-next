@@ -2,15 +2,17 @@ import { GhostButton, PrimaryButton } from "@/components/PrimaryButton";
 import { Section } from "@/components/Section";
 import { ServicesWeOffer } from "@/components/ServicesWeOffer";
 import { formatUsd } from "@/lib/format";
-import { diyProjects, products } from "@/lib/data";
+import { getDiyProjects } from "@/content/diy-projects";
+import { products } from "@/lib/data";
 import { Link } from "@/i18n/navigation";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
+/** Unsplash；原 photo-1523240795612 已 404，换为可用素材 */
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1523240795612-9a054b055737?auto=format&fit=crop&w=2000&q=85";
+  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=2000&q=85";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -18,10 +20,12 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const th = await getTranslations("home");
-  const tc = await getTranslations("common");
+  const tDiy = await getTranslations("diyPage");
+  const tShopProducts = await getTranslations("shopProducts");
   const priceLocale = locale === "zh" ? "zh" : "en";
 
   const featured = products.slice(0, 2);
+  const diyFeatured = getDiyProjects(locale).slice(0, 3);
 
   return (
     <main className="bg-white">
@@ -77,8 +81,12 @@ export default async function HomePage({ params }: Props) {
             >
               <div className={`w-28 shrink-0 bg-gradient-to-br sm:w-36 ${p.imageGradient}`} />
               <div className="flex flex-1 flex-col justify-center p-4">
-                <p className="font-bold text-[color:var(--ink)]">{p.name}</p>
-                <p className="mt-1 text-sm font-medium text-[color:var(--muted)]">{p.shortDescription}</p>
+                <p className="font-bold text-[color:var(--ink)]">
+                  {tShopProducts(`${p.messageKey}.name`)}
+                </p>
+                <p className="mt-1 text-sm font-medium text-[color:var(--muted)]">
+                  {tShopProducts(`${p.messageKey}.shortDescription`)}
+                </p>
                 <p className="mt-3 text-base font-bold text-[color:var(--ink)]">
                   {formatUsd(p.priceUsd, priceLocale)}
                 </p>
@@ -97,16 +105,18 @@ export default async function HomePage({ params }: Props) {
         subtitle={th("diySectionSubtitle")}
       >
         <div className="grid gap-5 sm:grid-cols-3">
-          {diyProjects.map((d) => (
+          {diyFeatured.map((d) => (
             <article
-              key={d.id}
+              key={d.slug}
               className="rounded-2xl border border-[color:var(--line)] bg-white p-5 shadow-[0_10px_36px_-22px_rgba(0,0,0,0.18)]"
             >
               <p className="text-xs font-bold uppercase tracking-wide text-[color:var(--accent-strong)]">
-                {d.difficulty} · {d.minutes} {tc("minutes")}
+                {d.tag === "party" ? tDiy("tagParty") : tDiy("tagDiy")} · {tDiy("gridDuration")}
               </p>
               <h3 className="mt-3 font-display text-xl text-[color:var(--ink)]">{d.title}</h3>
-              <p className="mt-2 text-sm font-medium leading-relaxed text-[color:var(--muted)]">{d.summary}</p>
+              <p className="mt-2 text-sm font-medium leading-relaxed text-[color:var(--muted)]">
+                {d.description.length > 140 ? `${d.description.slice(0, 140).trim()}…` : d.description}
+              </p>
             </article>
           ))}
         </div>

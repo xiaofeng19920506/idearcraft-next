@@ -29,6 +29,11 @@ export default async function AboutPage({ params }: Props) {
       <div className="mt-10">
         <PrimaryButton href="/booking">{t("cta")}</PrimaryButton>
       </div>
+
+      <section id="contactus" className="mt-16 scroll-mt-24 border-t border-[color:var(--line)] pt-12">
+        <h2 className="font-display text-2xl text-[color:var(--ink)]">{t("contactTitle")}</h2>
+        <p className="mt-4 max-w-2xl leading-relaxed text-[color:var(--muted)]">{t("contactBody")}</p>
+      </section>
     </main>
   );
 }

@@ -11,6 +11,7 @@ type Step = "shipping" | "review" | "done";
 export default function CheckoutPage() {
   const router = useRouter();
   const t = useTranslations("checkout");
+  const tProducts = useTranslations("shopProducts");
   const locale = useLocale();
   const priceLocale = locale === "zh" ? "zh" : "en";
   const { items, subtotalUsd, clear } = useCart();
@@ -126,7 +127,7 @@ export default function CheckoutPage() {
             {items.map((i) => (
               <li key={i.product.id} className="flex justify-between text-[color:var(--ink-soft)]">
                 <span>
-                  {i.product.name} × {i.qty}
+                  {tProducts(`${i.product.messageKey}.name`)} × {i.qty}
                 </span>
                 <span className="font-semibold text-[color:var(--ink)]">
                   {formatUsd(i.product.priceUsd * i.qty, priceLocale)}

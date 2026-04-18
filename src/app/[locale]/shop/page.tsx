@@ -17,6 +17,7 @@ export default async function ShopPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("shop");
+  const tProducts = await getTranslations("shopProducts");
   const priceLocale = locale === "zh" ? "zh" : "en";
 
   return (
@@ -39,10 +40,10 @@ export default async function ShopPage({ params }: Props) {
             <div className={`h-44 bg-gradient-to-br ${p.imageGradient}`} />
             <div className="flex flex-1 flex-col p-5">
               <h2 className="font-display text-xl text-[color:var(--ink)] group-hover:text-[color:var(--accent-strong)]">
-                {p.name}
+                {tProducts(`${p.messageKey}.name`)}
               </h2>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-[color:var(--muted)]">
-                {p.shortDescription}
+                {tProducts(`${p.messageKey}.shortDescription`)}
               </p>
               <p className="mt-4 text-lg font-semibold text-[color:var(--accent-strong)]">
                 {formatUsd(p.priceUsd, priceLocale)}

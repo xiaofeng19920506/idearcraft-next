@@ -26,14 +26,20 @@
   },
   "footer": {
     "tagline": "Handmade experience studio · Classes, parties & supplies.",
-    "explore": "Explore",
-    "location": "Location",
-    "addressLine1": "Sample address",
-    "addressLine2": "Pasadena, CA",
-    "contact": "Contact",
-    "email": "hello@idearcraft.example",
-    "comingSoon": "Coming soon",
-    "copyright": "© {year} IDearCraft"
+    "addressLine1": "3804 Lancaster Ave,",
+    "addressLine2": "Philadelphia, PA 19104",
+    "madeWith": "made with ❤️ by IDearCraft",
+    "hoursTitle": "Hours",
+    "hoursMonThu": "Mon-Thur: 11:30 am - 8:00pm",
+    "hoursFriSun": "Fri-Sun: 11:30 am - 08:30 pm",
+    "aboutTitle": "About",
+    "ourStory": "Our Story",
+    "contactUs": "Contact Us",
+    "contactTitle": "Contact",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "xiaohongshu": "小红书",
+    "copyright": "© 2026 IDearCraft"
   },
   "cookie": {
     "text": "We use cookies to improve your experience and analytics. By continuing you agree to our practices (demo copy — replace with your policy).",
@@ -126,6 +132,23 @@
     "back": "← Back to shop",
     "notFound": "Product not found"
   },
+  "shopProducts": {
+    "atelierStarterKit": {
+      "name": "Atelier starter kit",
+      "shortDescription": "Tools and starter materials — great for first-timers.",
+      "description": "Carefully picked paper, cordage, and basic tools with a step-by-step guide so you can keep the studio rhythm at home."
+    },
+    "seasonalGiftBox": {
+      "name": "Seasonal gift box · limited palette",
+      "shortDescription": "Packaging and colors rotate with the season — perfect for gifting.",
+      "description": "Three small craft projects inside, with a handwritten note card and gift wrap. Limited quantities while supplies last."
+    },
+    "studioMerchCap": {
+      "name": "Studio merch · baseball cap",
+      "shortDescription": "Embroidered logo; comfortable for everyday wear.",
+      "description": "Breathable cotton with subtle embroidery. Pick up in studio or ship — enter your address at checkout."
+    }
+  },
   "product": {
     "addToCart": "Add to cart",
     "added": "Added",
@@ -170,12 +193,26 @@
     "title": "About IDearCraft",
     "p1": "This page maps to the original /aboutus route. We rebuilt the stack in Next.js; tone follows a warm, invitation-style studio site.",
     "p2": "We believe making isn’t only about technique — it’s about slowing down: choosing colors, folds, knots — small decisions that add up to confidence and gifts.",
-    "cta": "Book a visit"
+    "cta": "Book a visit",
+    "contactTitle": "Contact",
+    "contactBody": "Party packages and custom group events are arranged directly with the studio. Message us on Instagram @idearcrafts, TikTok @idearcrafts, or 小红书 via the footer links — we’ll reply as soon as we can."
   },
   "diyPage": {
     "eyebrow": "DIY Projects",
-    "title": "Inspiration wall",
-    "intro": "Maps to /diyprojects. Swap in CMS or Notion later."
+    "title": "DIY Projects",
+    "intro": "We offer various services as DIY project, Workshop, and party size events. Check out the projects below and learn about the details and offers by clicking \"price list\".",
+    "gridDuration": "1h 30mins",
+    "tagDiy": "DIY",
+    "tagParty": "Party",
+    "priceList": "Price list",
+    "reservationFee": "Reservation Fee",
+    "estimatedTime": "Estimated Time",
+    "priceHeading": "Price",
+    "bookNow": "Book Now",
+    "tableItem": "Item",
+    "tableSize": "Size",
+    "tablePrice": "Price",
+    "close": "Close"
   },
   "comingSoon": {
     "eyebrow": "Coming Soon",

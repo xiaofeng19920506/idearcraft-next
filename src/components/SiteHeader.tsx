@@ -26,7 +26,12 @@ export function SiteHeader() {
     if (!open) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") startTransition(() => setOpen(false));
+    };
+    window.addEventListener("keydown", onKey);
     return () => {
+      window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
     };
   }, [open]);
@@ -38,6 +43,8 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen(true)}
+            aria-expanded={open}
+            aria-controls="site-nav-drawer"
             className="flex h-10 w-10 items-center justify-center rounded-md text-[color:var(--ink)] transition hover:bg-black/5"
             aria-label={t("openMenu")}
           >
@@ -69,29 +76,20 @@ export function SiteHeader() {
             </Link>
           </div>
         </div>
-
-        <nav className="hidden border-t border-black/10 px-6 py-2 md:block">
-          <ul className="mx-auto flex max-w-6xl justify-center gap-10 text-sm font-semibold text-white/95">
-            {nav.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="transition hover:text-white hover:underline">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </header>
 
       {open ? (
-        <div className="fixed inset-0 z-[70] md:hidden">
+        <div className="fixed inset-0 z-[70]">
           <button
             type="button"
             className="absolute inset-0 bg-black/40"
             aria-label={t("closeMenu")}
             onClick={() => setOpen(false)}
           />
-          <div className="absolute left-0 top-0 flex h-full w-[min(100%,320px)] flex-col bg-white shadow-xl">
+          <div
+            id="site-nav-drawer"
+            className="absolute left-0 top-0 flex h-full w-full max-w-sm flex-col bg-white shadow-xl"
+          >
             <div className="flex items-center justify-between border-b border-[color:var(--line)] px-4 py-3">
               <span className="font-display text-xl text-[color:var(--ink)]">{t("menu")}</span>
               <button

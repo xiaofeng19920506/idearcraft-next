@@ -1,0 +1,411 @@
+{
+  "projects": [
+    {
+      "slug": "fluid-art",
+      "title": "Fluid Art",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Dive into the mesmerizing world of Fluid Art at IDearCraft! This vibrant session offers an exciting opportunity to unleash your creativity on a variety of shapes, including iconic figures like KAWS, rabbits, bears, or animal figurines. Perfect for anyone seeking a unique crafting experience, our session allows you to explore the art of color pouring, creating stunning, abstract pieces that serve as fantastic gifts or chic home decor.",
+      "reservationFee": "$3",
+      "estimatedTime": "1h 30min",
+      "priceIntro": "The bears need overnight to dry it.you can collect it within 3days.we will hold it for up to 2 month due to limited space,after which it will be donated.",
+      "priceRows": [
+        {
+          "item": "Finish Gross",
+          "size": "N/A",
+          "price": "$ 3"
+        },
+        {
+          "item": "Decoration",
+          "size": "N/A",
+          "price": "$ 10+"
+        },
+        {
+          "item": "Keychain",
+          "size": "N/A",
+          "price": "$ 20"
+        },
+        {
+          "item": "Bear",
+          "size": "18 cm/ 23 cm/ 33 cm/ 53 cm/ 75 cm",
+          "price": "$ 35/ $48/ $78/ $168/ $358"
+        },
+        {
+          "item": "Bunny",
+          "size": "27cm",
+          "price": "$ 48"
+        },
+        {
+          "item": "Kaws",
+          "size": "25 cm / 35 cm/ 55 cm/ 78cm",
+          "price": "$ 48/ $78/ $168/$388"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "decoden-cream",
+      "title": "Decoden Cream",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Decoden cream art is a fun and creative way to decorate with a fluffy and soft cream. You can make cool 3D designs using different colors of creams and a huge variety of cute charms ranging from flowers and butterflies to cute cartoon characters. Personalize your own phone cases, hair clips, jewelry boxes, hair brushes, mirrors, and more. Turn ordinary items into a unique, eye-catching piece customized to your own preference! It's about 3 days to air dry at home then start using!",
+      "reservationFee": "$3",
+      "estimatedTime": "About 1 hour",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Hair Clip 2 for",
+          "size": "N/A",
+          "price": "$ 15"
+        },
+        {
+          "item": "Hair Claw",
+          "size": "N/A",
+          "price": "$ 20"
+        },
+        {
+          "item": "Hair Brush",
+          "size": "N/A",
+          "price": "$ 20"
+        },
+        {
+          "item": "Hand Held Mirror",
+          "size": "N/A",
+          "price": "$ 20"
+        },
+        {
+          "item": "Phone Back Clip",
+          "size": "N/A",
+          "price": "$ 20"
+        },
+        {
+          "item": "Car Hanging Accessory",
+          "size": "N/A",
+          "price": "$ 30"
+        },
+        {
+          "item": "Phone Case",
+          "size": "N/A",
+          "price": "$ 38"
+        },
+        {
+          "item": "Birthday Cake Container",
+          "size": "N/A",
+          "price": "$ 35"
+        },
+        {
+          "item": "Picture Frame",
+          "size": "N/A",
+          "price": "$ 35"
+        },
+        {
+          "item": "Phone Stand",
+          "size": "N/A",
+          "price": "$ 35"
+        },
+        {
+          "item": "Mirror Stand",
+          "size": "N/A",
+          "price": "$ 38"
+        },
+        {
+          "item": "Jewelry Box",
+          "size": "N/A",
+          "price": "$ 38"
+        },
+        {
+          "item": "Alarm Clock",
+          "size": "N/A",
+          "price": "$ 38"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "beading",
+      "title": "Beading",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Join us for a fun and creative beading class where you'll learn the art of designing and crafting your own unique beaded piece. You'll be guided through the basics of bead selection with a range of pearls and beads. All materials are provided, and by the end of the class, you'll have a beautiful, personalized bracelet, necklace, waist beads, etc. to take home. No prior experience is needed—just bring your enthusiasm and a willingness to explore your creativity!",
+      "reservationFee": "$3",
+      "estimatedTime": "1h 30min",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Beading Jewelry",
+          "size": "N/A",
+          "price": "$ 38+"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "pompom-ball-art",
+      "title": "Pompom Ball Art",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Discover the magic of pompom ball art at our craft store! Whether it's adorably decorating bear models, adding texture to canvas art, or creating custom tote bags, we transform everyday items into colorful, fun masterpieces. Perfect for gifts, décor, and adding a personal touch to your life!",
+      "reservationFee": "$3",
+      "estimatedTime": "1h 30min",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Pompom Ball",
+          "size": "10 x 10 inch",
+          "price": "$ 45"
+        },
+        {
+          "item": "Pompom Ball",
+          "size": "12 x 12 inch",
+          "price": "$ 58"
+        },
+        {
+          "item": "Pompom Ball",
+          "size": "11 x 14 inch",
+          "price": "$ 68"
+        },
+        {
+          "item": "Pompom Ball",
+          "size": "12 x 16 inch",
+          "price": "$ 98"
+        },
+        {
+          "item": "Pompom Ball",
+          "size": "16 x 20 inch",
+          "price": "$ 148"
+        },
+        {
+          "item": "Pompom Bear",
+          "size": "Small",
+          "price": "$ 55"
+        },
+        {
+          "item": "Pompom Bear",
+          "size": "Large",
+          "price": "$ 80"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "canvas-painting",
+      "title": "Canvas Painting",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Immerse yourself in our Canvas Painting session, where you'll explore creative techniques to bring your unique vision to life on a textured canvas. Using various paints and brushes, you can craft a masterpiece that will not only be a joy to create but also serve as a striking art piece for your home or office. This session is perfect for all skill levels, and your finished artwork will be a one-of-a-kind expression of your creativity.",
+      "reservationFee": "$3",
+      "estimatedTime": "1h 30min",
+      "priceIntro": "*Texture painting extra $10 on each size",
+      "priceRows": [
+        {
+          "item": "Canvas Painting",
+          "size": "8 x 10 inch",
+          "price": "$ 25"
+        },
+        {
+          "item": "Canvas Painting",
+          "size": "10 x 10 inch",
+          "price": "$ 38"
+        },
+        {
+          "item": "Canvas Painting",
+          "size": "12 x 12 inch",
+          "price": "$ 58"
+        },
+        {
+          "item": "Canvas Painting",
+          "size": "11 x 14 inch",
+          "price": "$ 68"
+        },
+        {
+          "item": "Canvas Painting",
+          "size": "16 x 20 inch",
+          "price": "$ 138"
+        },
+        {
+          "item": "Muji Bag Design",
+          "size": "N/A",
+          "price": "$ 65"
+        },
+        {
+          "item": "Clock Design",
+          "size": "N/A",
+          "price": "$ 68"
+        },
+        {
+          "item": "Oil Pastel Painting",
+          "size": "N/A",
+          "price": "$ 48"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "moonlight-painting",
+      "title": "Moonlight Painting",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Step into the enchanting world of Moonlight Painting, where you'll create glowing art pieces using special materials. In this session, you'll learn how to paint and embed light elements within your artwork, giving your creation a magical glow-in-the-dark effect. Whether you're looking for a fun way to experiment with new art techniques or want to create a unique piece for your space, this session offers an immersive and creative experience.",
+      "reservationFee": "$3",
+      "estimatedTime": "1h 30min",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Moonlight Painting",
+          "size": "Small",
+          "price": "$ 40"
+        },
+        {
+          "item": "Moonlight Painting",
+          "size": "Large",
+          "price": "$ 50"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "cartoon-bouquet",
+      "title": "Cartoon Bouquet",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Join us for a whimsical Cartoon Bouquet-making session! In this fun and creative workshop, you'll arrange charming, cartoon-themed figurines and flowers into delightful bouquets. These handmade bouquets make for fantastic gifts or unique décor pieces, adding a playful and heartwarming touch to any space. The session is perfect for anyone looking to try something new and leave with a colorful, personalized creation.",
+      "reservationFee": "$3",
+      "estimatedTime": "1h 30min",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Cartoon Bouquet",
+          "size": "N/A",
+          "price": "$ 68"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "crochet-bag",
+      "title": "Crochet Bag",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Embrace the simplicity and charm of our handcrafted crochet bags! Perfect for beginners and experienced crafters alike, we offer one-on-one guidance to help you create your own stylish bag with ease. Durable, trendy, and unique—Great for both everyday use and special occasions!",
+      "reservationFee": "$3",
+      "estimatedTime": "1h 30min",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Crochet Bag (one roll)",
+          "size": "N/A",
+          "price": "$ 48"
+        },
+        {
+          "item": "Crochet Blanket (one roll)",
+          "size": "N/A",
+          "price": "$ 48"
+        },
+        {
+          "item": "Per Additional Roll",
+          "size": "N/A",
+          "price": "$ 5"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "flower-arrangement",
+      "title": "Flower Arrangement",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Discover the beauty of flower arranging in this hands-on Flower Arrangement session. You'll explore techniques for creating stunning floral displays using a variety of fresh blooms, perfect for brightening up any space. Whether you're making a centerpiece for a special occasion or just looking to add a natural touch to your home décor, this workshop offers a fun and relaxing way to engage with nature's beauty.",
+      "reservationFee": "$3",
+      "estimatedTime": "2 Hours",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Flower Arrangement Class",
+          "size": "N/A",
+          "price": "$ 80"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "tufting",
+      "title": "Tufting",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Get hands-on with Tufting, a fun and tactile art form where you can create your own custom rug or textile art piece. Using a tufting gun, you'll be able to design and craft a unique piece with bold textures and colors. Whether you're interested in making a cozy rug or a vibrant wall hanging, this session will teach you everything you need to know about this exciting and creative medium.",
+      "reservationFee": "$ 78",
+      "estimatedTime": "1-3 Hours",
+      "priceIntro": "One ticket is available for one  person. workshop reservations are binding, non-refundable and only can be rescheduled.",
+      "priceRows": [
+        {
+          "item": "Tufting",
+          "size": "14 x 14 inch",
+          "price": "$ 78"
+        },
+        {
+          "item": "Tufting",
+          "size": "20 x 20 inch",
+          "price": "$ 108"
+        },
+        {
+          "item": "Tufting",
+          "size": "24 x 24 inch",
+          "price": "$ 138"
+        },
+        {
+          "item": "Tufting",
+          "size": "28 x 28 inch",
+          "price": "$ 178"
+        },
+        {
+          "item": "Mirror",
+          "size": "N/A",
+          "price": "$ 20 add on"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "candle-making",
+      "title": "Candle Making",
+      "tag": "diy",
+      "cardDuration": "1h 30mins",
+      "description": "Delve into the world of Candle Making in this relaxing and creative session. You'll learn how to blend fragrances, choose colors, and pour wax to create custom candles that reflect your personal style. These handmade candles are perfect for creating a calming atmosphere in your home or as thoughtful gifts for loved ones. Each participant will leave with beautifully crafted candles and the knowledge to continue making them at home.",
+      "reservationFee": "$3",
+      "estimatedTime": "2 Hours",
+      "priceIntro": null,
+      "priceRows": [
+        {
+          "item": "Candle Making",
+          "size": "N/A",
+          "price": "$ 60"
+        }
+      ],
+      "priceFooter": null,
+      "bookHref": "/booking/s-diy-projects"
+    },
+    {
+      "slug": "party",
+      "title": "Party",
+      "tag": "party",
+      "cardDuration": "1h 30mins",
+      "description": "Celebrate creativity with a custom Party session, perfect for birthdays, team-building events, or special gatherings. Choose from a range of craft activities tailored to your group, including painting, candle making, or tufting, ensuring everyone has a memorable and hands-on experience. Our party sessions are designed to bring people together through the joy of making, with each guest leaving with their own unique creation to remember the occasion.",
+      "reservationFee": null,
+      "estimatedTime": "By appointment",
+      "priceIntro": null,
+      "priceRows": [],
+      "priceFooter": "Party is only available by contact! Feel free to give us a call or leave a message to us!",
+      "bookHref": "/aboutus#contactus"
+    }
+  ]
+}
