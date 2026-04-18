@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Plushumi 风格参考：顶栏粉 #F8969B、黑字主按钮、白底、圆润手写标题 */
+:root {
+  --brand: #f8969b;
+  --brand-600: #e87b81;
+  --brand-soft: #fff0f1;
+  --ink: #000000;
+  --ink-soft: #222222;
+  --muted: #444444;
+  --surface: #ffffff;
+  --surface-2: #f7f7f7;
+  --line: #e5e5e5;
+  --accent: #000000;
+  --accent-strong: #f8969b;
+  --accent-soft: #fff0f1;
+}
+
+@theme inline {
+  --color-background: var(--surface);
+  --color-foreground: var(--ink);
+}
+
+.font-display {
+  font-family: var(--font-brand), "Comic Sans MS", "Trebuchet MS", cursive;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand) 35%, white);
+}
