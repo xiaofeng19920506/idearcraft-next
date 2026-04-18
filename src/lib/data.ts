@@ -17,7 +17,7 @@ export const bookingServices: BookingService[] = [
     messageKey: "workshop",
     priceUsd: 95,
     imageUrl:
-      "https://images.unsplash.com/photo-1615876237516-e998f650f836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&w=900&q=80",
     learnMoreHref: "/aboutus",
   },
   {
